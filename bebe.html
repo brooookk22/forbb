@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR BB</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FOR MY BABY LYNELYNE!!</h1>
+        
+        <div class="photos">
+            <img src="baby.jpeg" alt="First Picture naminn">
+            <img src="bb.jpeg" alt="Cuteeeeeee">
+            <img src="bb2.jpeg" alt="Fave!!">
+        </div>
+
+        <div class="messages">
+            <h2>Click a Bulletin to Reveal the Message 💌</h2>
+            <div class="bulletin" onclick="showMessage(0)">Open it bb</div>
+            <div class="bulletin" onclick="showMessage(1)">Ito paaaaa</div>
+            <div class="bulletin" onclick="showMessage(2)">Last na pu mahal!</div>
+
+            <ul id="messagesList">
+                <li class="hidden">Hi, Baby!! Mahal na mahal kita, sorry kung minsan makulit ako hehe iloveyou!!</li>
+                <li class="hidden">Baby, kalma lang palagi ha. Lahat 'yan lilipas rin, nandito lang ako palaga para sa'yo</li>
+                <li class="hidden">Mahal na mahal na mahal kita, simula nung una pa lang, at hindi na 'yun mag babago!!</li>
+           </ul>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(index) {
+            const messages = document.querySelectorAll("#messagesList li");
+            messages.forEach((msg, i) => {
+                if(i === index) {
+                    msg.classList.toggle("hidden");
+                } else {
+                    msg.classList.add("hidden"); // hide other messages
+                }
+            });
+        }
+    </script>
+</body>
+</html>
